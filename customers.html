@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to the ouside world</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/DS Logo Only.png" type="image/png">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-storage.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+
+<body>
+    <header class="header header-signup">
+        <div class="registration">
+            <p class="registration__text">
+                &nbsp;
+            </p>
+            <div class="registration__login-box">
+                <div class="registration__login">
+                    <a href="creater-profile.html" class="registration__link">
+                        Your Profile
+                    </a>
+                </div>
+                <div class="registration__login">
+                    <a class="registration__link" id="log-out" style="cursor: pointer;">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="u-centre-text">
+            <h1 class="heading-main">
+               Your Customers
+            </h1>
+        </div>
+        <div class="customers">
+            <ul class="customer_list" id="cust_list">
+                <!-- <li class="customer_item">
+                    <div class="entry-name">Name</div> : <div class="entry-value">Deeksha Sharma</div>
+                    <div class="entry-name">Email</div> : <div class="entry-value">abc@gmail.com</div>
+                    <div class="entry-name">Contact Details</div> : <div class="entry-value">90909090</div>
+                    <div class="entry-name">Address</div>: <div class="entry-value">Meerut Uttar Pradesh</div>
+                </li> -->
+
+            </ul>
+        </div>
+
+    </header>
+    <script src="js/apikey.js"></script>
+    <script>
+        firebase.initializeApp(config);
+
+        //make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+
+    </script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        auth.onAuthStateChanged((user)=>{
+            if(user === null){
+                alert("Login to view your Customers!");
+                location.replace('index.html');
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to the ouside world</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/DS Logo Only.png" type="image/png">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-storage.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+
+<body>
+    <div id="main-page">
+    <header class="header">
+        <div class="registration">
+            <p class="registration__text">
+                Want to register your firm?
+            </p>
+            <div class="registration__login-box">
+                <div class="registration__login">
+                    <a href="login.html" class="registration__link">
+                        Login
+                    </a>
+                </div>
+                <div class="registration__login">
+                    <a href="signup.html" class="registration__link">
+                        Sign up
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="header__heading-primary">
+                Aatm Nirbhar
+            </div>
+            <div class="search-form">
+                <form action="" class="search-form__form">
+                    <input type="text" class="search-form__input" id="form-name" name="search"
+                        placeholder="Search for restaurants , Salon and Malls">
+                    <label class = "search-form__label" for="form-name">Search for restaurants , Salon and Malls</label>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="facility">
+        <div class="u-centre-text">
+            <h1 class="heading-main">
+                Enjoy the top facilities from your home
+            </h1>
+        </div>
+        <ul class="facility-list" id="list">
+            <!-- <li class="facility-list__items">
+                <img src="Images/multi-cuisine-restaurant.jpg" alt="" class="facility-list__items-img">
+                <div class="facility-list__items-rem">
+                    <div class="facility-list__items-rem-name facility-items">Multi cuisine Restaurant</div>
+                    <div class="facility-list__items-rem-loc facility-items">Meerut</div>
+                    <div class="facility-list__items-rem-rating facility-items">
+                        <ion-icon class="star" name="star"></ion-icon>
+                        <ion-icon class="star" name="star-half"></ion-icon>
+                    </div>
+                    <div class="facility-list__items-rem-type facility-items">Acceps online payment only</div>
+
+                    <div class="facility-check-out">
+                        <a href="#" class="facility-link">
+                            Check-Out &rarr;
+                        </a>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+        <ul class="facility-list" id="list1">
+
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="footer-img u-centre-text">
+            <a href="https://github.com/Deeksha2501" target="_blank" rel="noopener noreferrer">
+            <img src="images/DS Logo Only.png" alt="Logo">
+        </a>
+        </div>
+        <div class="footer-text">
+            Made with <span class="heart">&#10084;</span> in India.<br> Copyright &copy; Deeksha Sharma.You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Deeksha Sharma, is of course highly appreciated! 
+        </div>
+    </div>
+</div>
+<div id="form-pop">
+    <header class="header header-signup">
+        <div class="u-centre-text">
+            <h1 class="heading-main">
+                Fill out these details to register to the firm!
+            </h1>
+        </div>
+        <div class="search-form search-form-login">
+            <form action="" class="search-form__form" id="customer-form">
+                <input type="text" name="cname" id="" class="search-form__input search-form__input-login" required placeholder="Enter your Name">
+                <label for="" class = "search-form__label search-form__label-login"></label><br>
+                <input type="email" name="cemail" id="" class="search-form__input search-form__input-login " placeholder="Enter your mail ID" required>
+                <label for="" class = "search-form__label search-form__label-login"></label><br>
+                <input type="number" name="cnum" id="" class="search-form__input search-form__input-login" required placeholder="Enter your Contact Number">
+                <label for="" class = "search-form__label search-form__label-login"></label><br>
+                <input type="text" name="cadd" id="" class="search-form__input search-form__input-login" required placeholder="Enter your Address">
+                <label for="" class = "search-form__label search-form__label-login"></label><br>
+                <button class="submit-button" type="submit">Submit</button>
+            </form>
+        </div>
+    </header>
+</div>
+    <!-- <form action="" class="login-form">
+        <input type="email" name="" id="email">
+        <label for="email">Email</label>
+        <input type="password" name="" id="pass">
+        <label for="pass">Password</label>
+    </form> -->
+    
+    <script src="js/apikey.js"></script>
+    <script>
+        firebase.initializeApp(config);
+
+        //make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true }); 
+
+    </script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
+
+<!--Built by JONAS SCHMEDTMANN for his online course ADVANCED CSS AND SASS. Copyright © by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!-->
+
+<!-- FIRM NAME
+FIRM CATEGORY
+FIRM DESCRIPTION
+FIRM LOCATION
+firm rating
+firm photograph -->
+
+<!-- restaurants
+salon
+Malls -->

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to the ouside world</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/DS Logo Only.png" type="image/png">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-storage.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+<body>
+    <!-- <form action="" class="login-form">
+        <input type="email" name="" id="login-email" required>
+        <label for="login-email">Email</label>
+        <input type="password" name="" id="login-pass" required>
+        <label for="login-pass">Password</label>
+
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <header class="header">
+        <div class="u-centre-text">
+            <h1 class="heading-main">
+                Login
+            </h1>
+        </div>
+        <div class="search-form search-form-login">
+            <form action="" class="search-form__form login-form">
+                <!-- <input type="text" class="search-form__input" id="form-name"
+                    placeholder="Search for restaurants , Salon and Malls">
+                <label class = "search-form__label" for="form-name">Search for restaurants , Salon and Malls</label> -->
+                <input type="email" name="" id="login-email" class="search-form__input search-form__input-login " placeholder="Enter your mail ID" required>
+                <label for="login-email" class = "search-form__label search-form__label-login"></label><br>
+                <input type="password" name="" id="login-pass" class="search-form__input search-form__input-login" required placeholder="Enter your Password">
+                <label for="login-pass" class = "search-form__label search-form__label-login"></label><br>
+
+                <button class="submit-button" type="submit">Submit</button>
+            </form>
+        </div>
+</header>
+
+    <script src="js/apikey.js"></script>
+    <script>
+        firebase.initializeApp(config);
+
+        //make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true }); 
+
+    </script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

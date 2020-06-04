@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to the ouside world</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/DS Logo Only.png" type="image/png">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-storage.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</head>
+<body>
+    <!-- abcd  -->
+    <!-- <button id="log-out">LOG OUT</button> -->
+    <div id =  "logout-text">
+        <div class="registration__login-box">
+            <div class="registration__login">
+                <a href="login.html" class="registration__link">
+                    Login
+                </a>
+            </div>
+            <div class="registration__login">
+                <a href="index.html" class="registration__link">
+                    &larr; Back
+                </a>
+            </div>
+        </div>
+        <br>
+        <br>
+    <div class="u-centre-text">
+        <h1 class="heading-main">
+            Login to view your Profile!!
+        </h1>
+    </div>
+</div>
+   <div id = "creater-dashboard" >
+    <header class="header">
+        <div class="registration">
+            <p class="registration__text">
+                &nbsp;
+            </p>
+            <div class="registration__login-box">
+                <div class="registration__login">
+                    <a href="creater-profile.html" class="registration__link" target="_blank" >
+                        Your Profile
+                    </a>
+                </div>
+                <div class="registration__login">
+                    <a class="registration__link" id="log-out" style="cursor: pointer;color: red;">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="header__heading-primary">
+                Aatm Nirbhar
+            </div>
+            <div class="search-form">
+                <form action="" class="search-form__form">
+                    <input type="text" class="search-form__input" id="form-name" name="search"
+                        placeholder="Search for restaurants , Salon and Malls">
+                    <label class = "search-form__label" for="form-name">Search for restaurants , Salon and Malls</label>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="facility">
+        <div class="u-centre-text">
+            <h1 class="heading-main">
+               Top facilities out there!!
+            </h1>
+        </div>
+        <ul class="facility-list">
+            <!-- <li class="facility-list__items">
+                <img src="Images/multi-cuisine-restaurant.jpg" alt="" class="facility-list__items-img">
+                <div class="facility-list__items-rem">
+                    <div class="facility-list__items-rem-name facility-items">Multi cuisine Restaurant</div>
+                    <div class="facility-list__items-rem-loc facility-items">Meerut</div>
+                    <div class="facility-list__items-rem-rating facility-items">2</div>
+                    <div class="facility-list__items-rem-type facility-items">Acceps online payment only</div>
+
+                    <div class="facility-check-out">
+                        <a href="#" class="facility-link">
+                            Check-Out &rarr;
+                        </a>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+        <ul class="facility-list" id="list1">
+
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="footer-img u-centre-text">
+            <a href="https://github.com/Deeksha2501" target="_blank" rel="noopener noreferrer">
+            <img src="images/DS Logo Only.png" alt="Logo">
+        </a>
+        </div>
+        <div class="footer-text">
+            Made with <span class="heart">&#10084;</span> in India.<br> Copyright &copy; Deeksha Sharma.You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Deeksha Sharma, is of course highly appreciated! 
+        </div>
+    </div>
+   </div>
+
+    <script src="js/apikey.js"></script>
+    <script>
+        firebase.initializeApp(config);
+
+        //make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true }); 
+
+    </script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

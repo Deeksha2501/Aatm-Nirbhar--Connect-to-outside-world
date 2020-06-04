@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-storage.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form action="" class="signup-form">
+        <input type="email" name="" id="signup-email"  placeholder="Enter your mail ID" required>
+        <label for="signup-email">Enter your mail ID</label>
+        <input type="password" name="" id="signup-pass"  required placeholder="Enter your Password">
+        <label for="signup-pass">Enter your Password</label>
+        <input type="file" name="image-file" id="image-upload"  required>
+        <label for="image-upload"></label>
+        <button onClick="upload_image()" type="submit">Submit</button>
+    </form> -->
+
+    <header class="header header-signup">
+        <div class="u-centre-text">
+            <h1 class="heading-main">
+                UPDATE YOUR CREDENTIALS
+            </h1>
+        </div>
+        <div class="search-form search-form-login" id = "search-form-update">
+            <!-- <form action="" class="search-form__form signup-form">
+                <input type="name" name="name" id="signup-name" class="search-form__input search-form__input-login "
+                    placeholder="Enter your Firm Name" required value="abc">
+                <label for="signup-name" class="search-form__label search-form__label-login"></label><br>
+                <input type="email" name="email" id="signup-email" class="search-form__input search-form__input-login "
+                    placeholder="Enter your mail ID" required value="pqr">
+                <label for="signup-email" class="search-form__label search-form__label-login"></label><br>
+                <input type="password" name="password" id="signup-pass" value="trd"
+                    class="search-form__input search-form__input-login" required placeholder="Enter your Password">
+                <label for="signup-pass" class="search-form__label search-form__label-login"></label><br>
+                <input type="text" name="loc" id="signup-loc" class="search-form__input search-form__input-login "
+                    placeholder="Location of Firm" required>
+                <label for="signup-loc" class="search-form__label search-form__label-login"></label><br>
+                <input type="number" name="rating" id="signup-rating"
+                    class="search-form__input search-form__input-login " placeholder="Enter the Rating of firm out of 5"
+                    required max="5" min="1" step=".5">
+                <label for="signup-rating" class="search-form__label search-form__label-login"></label><br>
+                <input type="file" name="image-file" id="image-upload"
+                    class="search-form__input search-form__input-login" required>
+                <label for="image-upload"></label><br>
+                <button type="submit">Submit</button>
+            </form> -->
+        </div>
+    </header>
+
+    <script src="js/apikey.js"></script>
+    <script>
+        firebase.initializeApp(config);
+
+        //make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+
+    </script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
+
+
+    <!-- <input type="text" class="search-form__input" id="form-name"
+            placeholder="Search for restaurants , Salon and Malls">
+        <label class = "search-form__label" for="form-name">Search for restaurants , Salon and Malls</label> -->

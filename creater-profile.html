@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to the ouside world</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/DS Logo Only.png" type="image/png">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-storage.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+
+<body>
+        <div class="registration__login-box">
+            <p class="registration__text">
+                &nbsp;
+            </p>
+            <div class="registration__login">
+                <a class="registration__link" id="log-out" style="cursor: pointer;">
+                    Logout
+                </a>
+            </div>
+            <div class="registration__login">
+                <a href="creater-dashboard.html" class="registration__link" >
+                    &larr; Back 
+                </a>
+            </div>
+    </div>
+    <header class="header header-profile">
+        <div class="u-centre-text">
+            <h1 class="heading-main">
+                Your Profile
+            </h1>
+        </div>
+        <div id="profile">
+        <!-- <img src="images/multi-cuisine-restaurant.jpg" alt="" class="profile-img">
+        <div class="profile-box">
+            
+            <div class="entry">
+                <div class="entry-name">Name of Firm</div>
+                <span class="colon">:</span>
+                <div class="entry-value">Deeksha Restaurant</div>
+            </div>
+            <div class="entry">
+                <div class="entry-name">Email of owner</div>
+                <span class="colon">:</span>
+                <div class="entry-value">deeksha@gmail.com</div>
+            </div>
+            <div class="entry">
+                <div class="entry-name">Location of Firm</div>
+                <span class="colon">:</span>
+                <div class="entry-value">Meerut, Uttar Pradesh</div>
+            </div>
+            <div class="entry">
+                <div class="entry-name">Rating</div>
+                <span class="colon">:</span>
+                <div class="entry-value">
+                    <ion-icon class="star" name="star"></ion-icon>
+                    <ion-icon class="star" name="star"></ion-icon>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-name"></div>
+                <div class="colon"></div>
+                <div class="entry-value"></div>
+            </div>
+        </div> -->
+    </div>
+        <div class="button update-button">
+            <a href="update.html" class="link">
+                UPDATE
+            </a>
+        </div>
+        <div class="button customer-button">
+            <a href="customers.html" class="link">
+                VIEW YOUR COSTUMERS
+            </a>
+        </div>
+        <div class="button customer-button">
+            <a  class="link" id="Delete_Account" style="cursor: pointer;">
+                Delete Account
+            </a>
+        </div>
+
+    </header>
+
+
+    <script src="js/apikey.js"></script>
+    <script>
+        firebase.initializeApp(config);
+
+        //make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+
+    </script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

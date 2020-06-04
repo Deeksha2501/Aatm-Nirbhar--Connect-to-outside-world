@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap");
+.u-centre-text {
+  text-align: center;
+  margin: 0 auto; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+::selection {
+  background-color: black;
+  color: white; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  color: white;
+  background: url(../Images/header-unsplash.jpg), black;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Roboto, Arial; }
+
+.registration {
+  position: absolute;
+  display: inline-block;
+  width: 35%;
+  font-size: 1.6rem;
+  top: 1rem;
+  right: 0;
+  color: #e2e2e2;
+  content: "";
+  display: table;
+  clear: both; }
+  .registration__text {
+    font-size: 2rem;
+    float: left; }
+  .registration__login-box {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0.3rem;
+    right: 0; }
+  .registration__login {
+    float: right;
+    padding-right: 2rem; }
+  .registration__link {
+    text-decoration: none;
+    color: #9fffff; }
+  .registration__link:hover {
+    color: white; }
+  .registration__login:hover {
+    transform: translateY(-2px); }
+
+.header {
+  position: relative;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); }
+  .header__main {
+    padding-top: 20rem;
+    text-align: center; }
+  .header__heading-primary {
+    font-size: 10rem;
+    font-weight: 600; }
+  .header-signup {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-bottom: 10rem; }
+
+.search-form {
+  display: inline-block;
+  width: 50%;
+  margin: 0 auto;
+  position: relative; }
+  .search-form__input {
+    cursor: text;
+    position: absolute;
+    top: 5rem;
+    left: 10rem;
+    width: 60%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 2px 4px;
+    border-bottom: 1px solid white; }
+    .search-form__input-login {
+      position: static;
+      margin: 3rem;
+      width: 30%; }
+  .search-form-login {
+    width: 100%;
+    text-align: center; }
+  .search-form__label {
+    cursor: text;
+    position: absolute;
+    top: 2.5rem;
+    left: 10rem;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+    opacity: 1;
+    padding: 2px 4px;
+    color: #dbd6d6; }
+  .search-form__input:placeholder-shown + .search-form__label {
+    top: 5rem;
+    font-size: 2rem;
+    opacity: 0; }
+
+.heading-main {
+  font-size: 4.5rem;
+  padding: 5rem; }
+
+.facility {
+  background-color: rgba(0, 0, 0, 0.8); }
+  .facility-list {
+    padding: 0 0 3rem 0;
+    width: 60%;
+    margin: 5rem auto 0 auto; }
+    .facility-list__items {
+      margin: 6rem 0;
+      list-style: none;
+      border-radius: 2px;
+      border: 1px solid #17c6d3;
+      height: 20rem; }
+      .facility-list__items-img {
+        width: 35%;
+        height: 100%;
+        background-size: cover;
+        float: left; }
+      .facility-list__items-rem {
+        height: 100%;
+        position: relative;
+        background: linear-gradient(to top, #000, transparent);
+        text-align: center;
+        font-size: 1.4rem;
+        float: right;
+        width: 65%;
+        padding-top: 1.5rem; }
+        .facility-list__items-rem-name {
+          text-align: center;
+          font-size: 3.5rem;
+          font-size: 2.3vw;
+          width: 100%; }
+        .facility-list__items-rem-type {
+          padding-top: 2rem;
+          color: #b1edff; }
+  .facility-items {
+    padding: 0.5rem 0; }
+  .facility-check-out {
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    font-size: 2.5rem;
+    background-color: #005765;
+    margin-bottom: -1rem;
+    text-align: center;
+    padding: 0.5rem;
+    height: 20%;
+    backface-visibility: hidden; }
+  .facility-link {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s; }
+  .facility-link:hover {
+    font-size: 2.8rem; }
+
+.footer {
+  display: inline-block;
+  padding: 5rem;
+  background-color: rgba(41, 40, 40, 0.7); }
+  .footer-img img {
+    width: 12%; }
+  .footer-text {
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 5rem 20rem; }
+
+.heart {
+  color: red; }
+
+#logout-text {
+  display: none;
+  visibility: hidden; }
+
+.star {
+  font-size: 2.5rem;
+  color: #ffd900; }
+
+.profile-box {
+  width: 60%;
+  font-size: 2rem; }
+  .profile-box .entry {
+    width: 100%;
+    display: inline-block;
+    margin: 2rem 0; }
+    .profile-box .entry-name {
+      display: inline-block;
+      width: 38%;
+      text-align: right;
+      margin-right: 3%; }
+    .profile-box .entry-value {
+      display: inline-block;
+      width: 50%;
+      text-align: left;
+      margin-left: 3%; }
+
+.profile-img {
+  float: right;
+  width: 20%;
+  margin: 1.5rem 10rem;
+  border-radius: 5px;
+  border: 2px solid #31606e; }
+
+#form-pop {
+  display: none; }
+
+.customer_list {
+  width: 50%;
+  margin: 0 auto;
+  padding: 3rem;
+  font-size: 1.5rem;
+  list-style: none; }
+  .customer_list #customer_item {
+    padding: 1rem;
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid rgba(63, 144, 211, 0.692); }
+    .customer_list #customer_item:first-child {
+      border-top: 1px solid rgba(63, 144, 211, 0.692); }
+    .customer_list #customer_item:nth-child(even) {
+      color: #ace5ff; }
+
+.entry-name {
+  padding: 2px;
+  display: inline-block;
+  width: 38%;
+  text-align: right;
+  margin-right: 3%; }
+
+.entry-value {
+  padding: 2px;
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+  margin-left: 3%; }
+
+#delete {
+  color: red;
+  float: right; }
+
+.button {
+  margin: 1rem;
+  text-align: centre;
+  text-decoration: none;
+  color: white; }
+
+.link {
+  font-size: 2rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: white; }
+
+#Delete_Account {
+  color: #ee3e3e; }
