@@ -168,6 +168,10 @@ getCostumers = (data) => {
     let changes = snapshot.docChanges();
     changes.forEach(change =>{
         if(change.type == 'added'){
+          let noCust = document.querySelector('#no-cust');
+          if(noCust){
+          noCust.style.display = "none";
+          }
           renderCustomer(change.doc);         
         }
         else if(change.type == 'removed'){
@@ -181,8 +185,6 @@ getCostumers = (data) => {
     })
 })
 };
-
-
 
 renderCustomer = (d) => {
   let ul_cust = document.getElementById("cust_list");
@@ -223,16 +225,16 @@ if (cross) {
 
 update = (d) => {
   let data = d.data();
-  let html = `<form action="" class="search-form__form" id ="update-form" data-id="${d.id}">
+  let html = `<form action="" class="search-form__form" id ="update-form" data-id="${d.id}" autocomplete="off">
                     <input type="name" name="name" id="signup-name" class="search-form__input search-form__input-login "
-                        placeholder="Enter your Firm Name" required value=${data.Name}>
+                        placeholder="Enter your Firm Name" required value="${data.Name}">
                     <label for="signup-name" class="search-form__label search-form__label-login"></label><br>
                     <input type="text" name="loc" id="signup-loc" class="search-form__input search-form__input-login "
-                        placeholder="Location of Firm" required value=${data.Location}>
+                        placeholder="Location of Firm" required value="${data.Location}">
                     <label for="signup-loc" class="search-form__label search-form__label-login"></label><br>
                     <input type="number" name="rating" id="signup-rating"
                         class="search-form__input search-form__input-login " placeholder="Enter the Rating of firm out of 5"
-                        required max="5" min="1" step=".5" value=${data.Rating}>
+                        required max="5" min="1" step=".5" value="${data.Rating}">
                     <label for="signup-rating" class="search-form__label search-form__label-login"></label><br>
           
                     <button type="submit">Submit</button>

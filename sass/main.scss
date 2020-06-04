@@ -87,7 +87,7 @@ body {
     text-align: center;
   }
   &__heading-primary {
-    font-size: 10rem;
+    font-size: 8vw;
     font-weight: 600;
   }
   &-signup{
@@ -342,9 +342,11 @@ body {
     margin-left: 3%;
   }
 
+  
 #delete{
   color: red;
   float: right;
+  cursor: pointer;
 }
 
 .button{
@@ -363,4 +365,27 @@ padding: 1rem;
 
 #Delete_Account{
   color: rgb(238, 62, 62);
+}
+
+
+.link{
+  font-size: 2rem;
+padding: 1rem;
+  text-decoration: none;
+  color : white;
+}
+
+#Delete_Account{
+  color: rgb(238, 62, 62);
+}
+
+@media only screen and (max-width: 1180px), only screen and (max-device-width: 480px){
+
+  .registration{
+    width: 100%;
+  }
+}
+
+a{
+  cursor: pointer;
 }

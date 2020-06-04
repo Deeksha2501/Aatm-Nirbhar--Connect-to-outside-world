@@ -32,10 +32,12 @@ getID = (id) => {
             alert('registered Succesfully');
             document.getElementById('main-page').style.display = "block";
             document.getElementById('form-pop').style.display = "none";
+            location.replace('index.html')
             cForm.cname.value = '';
             cForm.cemail.value = '';
             cForm.cnum.value = '';
             cForm.cadd.value = '';
+           
         })
 }
 )}
@@ -108,8 +110,9 @@ searchForm.addEventListener('submit' , e=>{
   let S = s[0].toUpperCase() +  
   s.slice(1);
   console.log(S);
+  ul_list2.innerHTML = '';
   db.collection("Facilities")
-    .where('Name', '>', S )
+    .where('Name', '>=', S )
     .get()
     .then((snapshot) => {
       if(snapshot.docs.length == 0){
@@ -149,6 +152,7 @@ function renderList2(doc) {
                     </div>
                 </li>`;
   if (ul_list2) {
+
     ul_list2.insertAdjacentHTML("beforeend", html);
 
   }
