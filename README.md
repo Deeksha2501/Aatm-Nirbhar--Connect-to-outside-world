@@ -2,7 +2,8 @@
 
 It's a platform where the facility providers(restuarant , Salon , Malls , Shops) can register their services and customer can enjoy these facilities by registering themselves to the particular firm.<br><br>
 Implemented using HTML , SASS , and Firebase as database.<br>
-[Link to the deployed App](https://aatm-nirbhar-connect-to-outside-world-git-master.deeksha2501.now.sh/)
+[Link to the deployed App](https://aatm-nirbhar-connect-to-outside-world-git-master.deeksha2501.now.sh/)<br>
+[![HitCount](http://hits.dwyl.com/Deeksha2501/Aatm-Nirbhar--Connect-to-outside-world.svg)](http://hits.dwyl.com/Deeksha2501/Aatm-Nirbhar--Connect-to-outside-world)
 
 - Authentication is made for Facility Providers
 - Facility provider can update their credentials , delete their facility and can upload image of their firm too.
