@@ -1,6 +1,6 @@
 ## Aatm Nirbhar (Connect to outside world)
 
-It's a platform where the facility providers(restuarant , Salon , Malls , Shops) can register their services and customer can enjoy these facilities by registering themselves to the particular firm.<br><br>
+It's a platform where the facility providers(restaurant , Salon , Malls , Shops) can register their services and customer can enjoy these facilities by registering themselves to the particular firm.<br><br>
 Implemented using HTML , SASS , and Firebase as database.<br>
 [Link to the deployed App](https://aatm-nirbhar-connect-to-outside-world-git-master.deeksha2501.now.sh/)<br><br>
 [![HitCount](http://hits.dwyl.com/Deeksha2501/Aatm-Nirbhar--Connect-to-outside-world.svg)](http://hits.dwyl.com/Deeksha2501/Aatm-Nirbhar--Connect-to-outside-world)
